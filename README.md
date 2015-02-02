@@ -3,7 +3,7 @@ Simple Code Snippet Examples for networkstatic.net Go Blog Posts
 
 -Post at http://networkstatic.net/golang-network-ops/
 
-Example usage and output:
+### Example usage and output
 
 *go run hello_world.go*
 
@@ -70,6 +70,7 @@ To get rid of those errors you can rename some of the main() functions to a new 
 
 Also, feel free to send pull requests in to learn how to do pull requests. Here is a quick how-to for pull requests. There are quite a few ways to do so, but it can be daunting for first timers so hopefully an example helps a bit. Also checkout the [Github Pull Request Help](https://help.github.com/articles/using-pull-requests/)
 
+### How to create a Pull Request
 
 Clone this repository
 
@@ -135,3 +136,39 @@ Make changes and then commit
 	git add --all
 	git commit --amend
 	git push --force
+
+
+### Example Pull Request CLI
+
+Here is the CLI from updating the README w/ instructions above
+
+	go-netops-tutorials # git checkout -b update/README
+	M	README.md
+	Switched to a new branch 'update/README'
+
+	go-netops-tutorials # git status
+	On branch update/README
+	Changes to be committed:
+	  (use "git reset HEAD <file>..." to unstage)
+	
+		modified:   README.md
+	
+	go-netops-tutorials # git add README.md
+
+	go-netops-tutorials # git commit -m"updated README"  --signoff
+	[update/README 433b6b5] updated README
+	 1 file changed, 133 insertions(+)
+
+	go-netops-tutorials # git push git@github.com:nerdalert/go-netops-tutorials.git 'update/README'
+	Counting objects: 5, done.
+	Delta compression using up to 8 threads.
+	Compressing objects: 100% (3/3), done.
+	Writing objects: 100% (3/3), 1.94 KiB | 0 bytes/s, done.
+	Total 3 (delta 1), reused 0 (delta 0)
+	To git@github.com:nerdalert/go-netops-tutorials.git
+	 * [new branch]      update/README -> update/README
+
+	
+Lastly, you can then go to your fork and Github will ask you to make a pull request. You simply compare your branch/fork to the destination branch such as 'master' and click create pull request.
+
+Thanks for stopping by and have fun hacking! Go is really a game changer in my mind for netops dev with really good performance.
